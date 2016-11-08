@@ -1,0 +1,36 @@
+﻿<script type="text/javascript" src="#springUrl('/js/controllers/agt/search.js')" charset="UTF-8"></script>
+<div ng-controller="SearchController">
+	<form name="SearchForm" method="POST" novalidate>
+		
+		<table style="margin-left: 40px; width:95%;">
+			
+			<tr>
+				#if("$!listHanTu" == "")
+					<td style ="width: 25%;">
+						<textarea style = "padding-left: 20px;font:16px/44px times new roman;" cols="50" rows="10" placeholder="Nhập chuỗi cần tìm hán việt, phân cách từ bằng kí tự space" name="searchInput" id="searchInput"></textarea>
+					</td>
+				#else
+					<td valign="top" style="padding-top: 20px; padding-left: 20px; width:360px;height:180px;font:16px/44px times new roman;border:0.1px solid #BDBDBD;line-height: 2">				
+						#foreach( $word in $!listHanTu )
+							$word<br/>
+						#end				
+					</td>
+				#end
+				
+				<td style ="padding-left: 30px; width: 10%">
+					<input type="button" value="Search" ng-click="doSearch()" />
+				</td>
+				
+				<td valign="top" style="padding-top: 20px; padding-left: 20px; width:360px;height:180px;font:14px/44px times new roman;border:0.1px solid #BDBDBD;line-height: 2">				
+				#foreach( $word in $!listHanViet )
+				$word<br/>
+				#end				
+				</td>
+				<td></td>
+			</tr>
+						
+		</table>
+	</form>
+</div>
+
+

@@ -1,0 +1,9 @@
+﻿<div ng-controller="RSearchController">
+	<form name="SearchForm" method="POST" novalidate>
+		
+		#foreach( $word in $!listHanTu )
+			<div name="word" align="justify">$word</div><br/>
+		#end
+	</form>
+</div>
+

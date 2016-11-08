@@ -1,0 +1,1 @@
+//var LOGIN_URL = CONTEXT_PATH + '/login';

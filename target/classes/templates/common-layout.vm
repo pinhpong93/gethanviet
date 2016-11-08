@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>$titlePage</title>
+
+<script type="text/javascript" src="#springUrl('/js/vendor/jquery-1.9.1.min.js')" charset="UTF-8"></script>
+<script type="text/javascript" src="#springUrl('/js/vendor/jquery-ui.min.js')" charset="UTF-8"></script>
+<script type="text/javascript" src="#springUrl('/js/vendor/angular.js')" charset="UTF-8"></script>
+<script type="text/javascript" src="#springUrl('/js/vendor/angular-sanitize.min.js')" charset="UTF-8"></script>
+<script type="text/javascript" src="#springUrl('/js/directives/angular-common-directive.js')" charset="UTF-8"></script>
+<script type="text/javascript" src="#springUrl('/js/app.js')" charset="UTF-8"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body ng-app="app" id="mainContent">
+<div>
+	<div style="font:16px/44px times new roman;">
+	<b><big>SEARCH HÁN VIỆT</big></b><br/>
+	Nguồn: <a href="http://hvdic.thivien.net/" target="_blank">http://hvdic.thivien.net/</a><br/>
+		#if ("$!body" != "")
+		#parse("$!{body}.vm")
+		#end					    				
+	</div>
+				    			
+</div>		
+</body>
+</html>
